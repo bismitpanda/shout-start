@@ -37,14 +37,26 @@ export function StatsSection() {
   return (
     <section className="py-12 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-row items-center space-x-6">
+        <div className="flex flex-col sm:flex-row items-center space-x-6">
           <div className="w-full md:w-1/2 mb-8 md:mb-0">
             <h2 className="text-4xl font-bold mb-4">
-              <span className="text-red-500">300+</span> Publications.
-              <span className="text-purple-500">50+</span> Authors.
-              <span className="text-blue-500">2000+</span> Views.
-              <span className="text-green-500">12%</span> Faster.
-              <span className="text-yellow-500">300+</span> Partners.
+              <span className="block sm:inline-flex">
+                <span className="text-red-500">300+</span>
+                &nbsp;Publications.&nbsp;
+              </span>
+              <span className="block sm:inline-flex">
+                <span className="text-purple-500">50+</span>&nbsp;Authors.&nbsp;
+              </span>
+              <span className="block sm:inline-flex">
+                <span className="text-blue-500">2000+</span>&nbsp;Views.&nbsp;
+              </span>
+              <span className="block sm:inline-flex">
+                <span className="text-green-500">12%</span>&nbsp;Faster.&nbsp;
+              </span>
+              <span className="block sm:inline-flex">
+                <span className="text-yellow-500">300+</span>
+                &nbsp;Partners.&nbsp;
+              </span>
             </h2>
 
             <div className="grid grid-cols-2 gap-6">
