@@ -6,6 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Check } from "lucide-react";
 
 export function PricingSection() {
   const plans = [
@@ -65,7 +66,9 @@ export function PricingSection() {
                 <ul className="space-y-2">
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-center">
-                      <span className="mr-2 text-green-500">✓</span>
+                      <span className="mr-2 text-green-500">
+                        <Check size={16} />
+                      </span>
                       {feature}
                     </li>
                   ))}

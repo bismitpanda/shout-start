@@ -14,19 +14,19 @@ export function PublicationsOffer() {
       title: "Books & E-books",
       icon: "/book-icon.svg",
       description:
-        "Get published in our book series and e-libraries across our network.",
+        "Self-published or professionally published works to showcase expertise.",
     },
     {
       title: "Press Releases",
       icon: "/press-icon.svg",
       description:
-        "Share your news and announcements across our media partners.",
+        "Official announcements for businesses, startups, and individuals for media coverage.",
     },
     {
       title: "Articles",
       icon: "/article-icon.svg",
       description:
-        "Publish opinion pieces, insights, and analyses on our network.",
+        "Thought leadership, industry insights, and opinion pieces to establish credibility.",
     },
   ];
 

@@ -6,31 +6,31 @@ export function StatsSection() {
   const testimonials = [
     {
       content:
-        "Thanks to ShoutStart my article went viral and got 20k views in just 24 hours.",
-      author: "John S.",
-      role: "Marketing Expert",
-      avatar: "/avatar1.png",
+        "Seamless and effective! Publishing my article was incredibly easy and I saw a traffic boost within days!",
+      author: "Emma R.",
+      role: "Data Analyst",
+      avatar: "/avatars/avatar-1.jpg",
     },
     {
       content:
-        "A total gamechanger for PR! My press release was picked up by 7 major outlets.",
-      author: "Sarah M.",
-      role: "PR Specialist",
-      avatar: "/avatar2.png",
+        "Fast professional, and impactful. The best press release service I've used - highly recommended!",
+      author: "Ananya K.",
+      role: "Public Relations Specialist",
+      avatar: "/avatars/avatar-2.jpg",
     },
     {
       content:
-        "Doubled my website traffic with just one article placement. Amazing platform!",
-      author: "David L.",
-      role: "Tech Entrepreneur",
-      avatar: "/avatar3.png",
+        "Helped my EB-1A case! The published article strengthened my petition and made my profile more authoritative",
+      author: "Ravi P.",
+      role: "Senior Data Scientist",
+      avatar: "/avatars/avatar-3.jpg",
     },
     {
       content:
-        "Doubled my website traffic with just one article placement. Amazing platform!",
-      author: "David L.",
-      role: "Tech Entrepreneur",
-      avatar: "/avatar3.png",
+        "A game-changer for PR! Our brand's press release got picked up by multiple outlets, boosting credibility instantly.",
+      author: "Jake M.",
+      role: "Digital Marketing Manager",
+      avatar: "/avatars/avatar-4.jpg",
     },
   ];
 
@@ -61,11 +61,9 @@ export function StatsSection() {
 
             <div className="grid grid-cols-2 gap-6">
               {testimonials.map((testimonial, index) => (
-                <Card key={index} className="border border-gray-200">
+                <Card key={index} className="border-none shadow-none bg-sky-50">
                   <CardContent className="p-6">
-                    <p className="mb-4 text-gray-700">
-                      &ldquo;{testimonial.content}&rdquo;
-                    </p>
+                    <p className="mb-4 text-gray-700">{testimonial.content}</p>
                     <div className="flex items-center">
                       <Avatar className="h-10 w-10 mr-3">
                         <AvatarImage src={testimonial.avatar} />
@@ -95,20 +93,20 @@ export function StatsSection() {
                     height={300}
                   />
                 </div>
-                <p className="mb-4 text-gray-700 pt-5">
-                  &ldquo;Doubled my website traffic with just one article
-                  placement. Amazing platform!&rdquo;
+                <p className="mb-4 text-gray-700 pt-5 text-xl">
+                  Seamless and effective! As a data analyst, I wanted to share
+                  my insights with a wider audience. ShoutStart made publishing
+                  effortless, and I saw a traffic boost within days! The
+                  platform's reach and SEO benefits exceeded my expectations.
                 </p>
                 <div className="flex items-center">
                   <Avatar className="h-10 w-10 mr-3">
-                    <AvatarImage src="/avatar3.png" />
+                    <AvatarImage src="/avatars/avatar-5.jpg" />
                     <AvatarFallback>D</AvatarFallback>
                   </Avatar>
                   <div>
                     <p className="font-semibold">David L.</p>
-                    <p className="text-sm text-gray-500">
-                      Tech EnEntrepreneurtr
-                    </p>
+                    <p className="text-sm text-gray-500">Tech Entrepreneur</p>
                   </div>
                 </div>
               </CardContent>

@@ -14,34 +14,34 @@ export function FeatureCards() {
       icon: PenTool,
       title: "Write",
       description:
-        "Get your ideas in front of readers. Submit any format, we'll do the rest.",
+        "Craft your press release or article in your own words, ready to be shared with the world.",
     },
     {
       color: "bg-purple-500",
       icon: CornerRightDown,
       title: "Submit",
       description:
-        "Get published in prestigious, highly trafficked publications across our network.",
+        "Easily submit your content to ShoutStart with a seamless, guided submission process.",
     },
     {
       color: "bg-green-500",
       icon: Send,
       title: "Publish",
       description:
-        "Your content on platforms reaching millions of readers and potential customers.",
+        "Our team reviews and publishes your content on high-authority platforms, ensuring maximum reach.",
     },
     {
       color: "bg-yellow-500",
       icon: Volume2,
       title: "Shout",
       description:
-        "Amplify your voice with our social network and promotional tools.",
+        "We boost your credibility, improve SEO rankings, and attract the right audience to your brand or profile.",
     },
   ];
 
   return (
-    <section className="px-4 py-8 max-w-7xl mx-auto">
-      <p className="text-center text-lg mb-8">
+    <section className="px-4 pb-8 max-w-7xl mx-auto">
+      <p className="text-center text-2xl mb-8">
         Four easy steps to get you noticed
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
