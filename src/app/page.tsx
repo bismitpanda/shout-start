@@ -11,7 +11,7 @@ import { PricingSection } from "@/components/pricing-section";
 import { CTASection } from "@/components/cta-section";
 import { Footer } from "@/components/footer";
 
-export function Home() {
+export default function Page() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       <Header />
@@ -31,5 +31,3 @@ export function Home() {
     </div>
   );
 }
-
-export default Home;

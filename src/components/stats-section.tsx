@@ -37,7 +37,7 @@ export function StatsSection() {
   return (
     <section className="py-12 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-row items-center space-x-2">
+        <div className="flex flex-row items-center space-x-6">
           <div className="w-full md:w-1/2 mb-8 md:mb-0">
             <h2 className="text-4xl font-bold mb-4">
               <span className="text-red-500">300+</span> Publications.
