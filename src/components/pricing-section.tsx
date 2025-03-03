@@ -1,22 +1,31 @@
-import { PricingCard } from "./pricing-card";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export function PricingSection() {
-  const pricingPlans = [
+  const plans = [
     {
-      title: "1 Press",
+      name: "Basic",
       price: "$100",
-      description: "Best for Casual Authors",
       features: [
+        "Key Value Proposition",
+        "Key Value Proposition",
+        "Key Value Proposition",
         "Key Value Proposition",
         "Key Value Proposition",
         "Key Value Proposition",
       ],
     },
     {
-      title: "3 Press",
+      name: "Pro",
       price: "$250",
-      description: "Best for EB-1A Aspirants",
       features: [
+        "Key Value Proposition",
         "Key Value Proposition",
         "Key Value Proposition",
         "Key Value Proposition",
@@ -26,11 +35,9 @@ export function PricingSection() {
       ],
     },
     {
-      title: "5+ Press",
+      name: "Premium",
       price: "$500",
-      description: "Best for Marketers",
       features: [
-        "Key Value Proposition",
         "Key Value Proposition",
         "Key Value Proposition",
         "Key Value Proposition",
@@ -43,21 +50,33 @@ export function PricingSection() {
   ];
 
   return (
-    <section className="py-16 container mx-auto px-4">
-      <h2 className="text-3xl font-bold text-center mb-12">
-        Don't whisper, Shout
-      </h2>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {pricingPlans.map((plan, index) => (
-          <PricingCard
-            key={index}
-            title={plan.title}
-            price={plan.price}
-            description={plan.description}
-            features={plan.features}
-          />
-        ))}
+    <section className="py-16 px-4">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl font-bold mb-12">Don't whisper, Shout</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {plans.map((plan, index) => (
+            <Card key={index} className="border border-gray-200 shadow-sm">
+              <CardHeader className="text-center pb-2">
+                <CardTitle className="text-xl">{plan.name}</CardTitle>
+                <p className="text-3xl font-bold">{plan.price}</p>
+                <p className="text-sm text-gray-500">One-time fee</p>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2">
+                  {plan.features.map((feature, i) => (
+                    <li key={i} className="flex items-center">
+                      <span className="mr-2 text-green-500">✓</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+              <CardFooter>
+                <Button className="w-full">Buy Now</Button>
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   );

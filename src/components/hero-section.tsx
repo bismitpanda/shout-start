@@ -1,32 +1,32 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export function HeroSection() {
-  const publishers = [
+  const logos = [
     "USA TODAY",
     "Entrepreneur",
     "MAXIM",
+    "Inc.",
+    "Life Style",
     "Inc.",
     "Life Style",
     "USA TODAY",
   ];
 
   return (
-    <section className="py-16 text-center container mx-auto px-4">
-      <h1 className="text-5xl font-bold mb-4">Publish. Shout. Get Noticed.</h1>
-      <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-        The quickest way to publish press releases, articles, and expert content
-        for maximum exposure across channels.
+    <section className="text-center py-24 px-4">
+      <h1 className="text-6xl font-bold mb-20">Publish. Shout. Get Noticed.</h1>
+      <p className="text-gray-700 text-xl max-w-2xl mx-auto mb-8">
+        The quickest way to publish press releases, articles, books and expert
+        content for maximum readership in our network.
       </p>
-
-      <div className="flex flex-wrap justify-center gap-4 my-6">
-        {publishers.map((publisher, index) => (
-          <span key={index} className="text-sm font-medium">
-            {publisher}
-          </span>
-        ))}
-      </div>
-
-      <Button className="mt-4">Get Your Press Release</Button>
+      <Button
+        variant="outline"
+        size="sm"
+        className="rounded-full border border-gray-300 mb-12"
+      >
+        Start your Press Release
+      </Button>
     </section>
   );
 }
