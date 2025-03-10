@@ -19,8 +19,6 @@ export function PricingSection() {
         "Key Value Proposition",
         "Key Value Proposition",
         "Key Value Proposition",
-        "Key Value Proposition",
-        "Key Value Proposition",
       ],
     },
     {
@@ -28,7 +26,6 @@ export function PricingSection() {
       price: 250,
       discount: { price: 175, percent: 30 },
       features: [
-        "Key Value Proposition",
         "Key Value Proposition",
         "Key Value Proposition",
         "Key Value Proposition",
@@ -49,6 +46,7 @@ export function PricingSection() {
         "Key Value Proposition",
         "Key Value Proposition",
         "Key Value Proposition",
+        "Key Value Proposition",
       ],
     },
   ];
@@ -59,7 +57,10 @@ export function PricingSection() {
         <h2 className="text-3xl font-bold mb-12">Don't whisper, Shout</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {plans.map((plan, index) => (
-            <Card key={index} className="border border-gray-200 shadow-sm">
+            <Card
+              key={index}
+              className="border border-gray-200 shadow-sm h-max"
+            >
               <CardHeader className="text-center pb-2">
                 <CardTitle className="text-xl">{plan.name}</CardTitle>
                 <p className="text-3xl font-bold">
@@ -75,10 +76,13 @@ export function PricingSection() {
                 )}
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2">
+                <ul className="space-y-6 mt-8">
                   {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-center">
-                      <span className="mr-2 text-green-500">
+                    <li
+                      key={i}
+                      className="flex w-full justify-center items-center"
+                    >
+                      <span className="mr-5 text-purple-300">
                         <Check size={16} />
                       </span>
                       {feature}

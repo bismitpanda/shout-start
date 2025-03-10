@@ -1,7 +1,7 @@
 import { Header } from "@/components/header";
 import { HeroSection } from "@/components/hero-section";
 import { FeatureCards } from "@/components/feature-cards";
-import { ServicesOffer } from "@/components/services-offer-section";
+import { ServicesOffered } from "@/components/services-offer-section";
 import { StatsSection } from "@/components/stats-section";
 import { AuthorsSection } from "@/components/authors-section";
 import { FoundersSection } from "@/components/founders-section";
@@ -9,6 +9,7 @@ import { EBSection } from "@/components/eb-section";
 import { PricingSection } from "@/components/pricing-section";
 import { CTASection } from "@/components/cta-section";
 import { Footer } from "@/components/footer";
+import { PublishingPartners } from "@/components/publishing-partners-section";
 
 export default function Page() {
   return (
@@ -17,8 +18,9 @@ export default function Page() {
       <main className="flex-grow">
         <HeroSection />
         <FeatureCards />
-        <ServicesOffer />
+        <ServicesOffered />
         <StatsSection />
+        <PublishingPartners />
         <AuthorsSection />
         <FoundersSection />
         <EBSection />

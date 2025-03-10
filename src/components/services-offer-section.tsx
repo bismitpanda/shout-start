@@ -1,14 +1,8 @@
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
-export function ServicesOffer() {
+export function ServicesOffered() {
   return (
     <section className="py-12">
       <h2 className="text-center text-2xl font-semibold mb-8">
@@ -28,7 +22,7 @@ export function ServicesOffer() {
               Official announcements for businesses, startups, and individuals.
             </p>
             <Button variant="link" className="uppercase">
-              Learn More
+              <ChevronLeft /> Learn More
             </Button>
           </div>
         </div>
@@ -46,7 +40,7 @@ export function ServicesOffer() {
               establish credibility.
             </p>
             <Button variant="link" className="uppercase">
-              Learn More
+              Learn More <ChevronRight />
             </Button>
           </div>
         </div>
