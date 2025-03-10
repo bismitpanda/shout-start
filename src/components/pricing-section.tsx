@@ -7,12 +7,13 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Check } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 export function PricingSection() {
   const plans = [
     {
-      name: "Basic",
-      price: "$100",
+      name: "1 Press",
+      price: 100,
       features: [
         "Key Value Proposition",
         "Key Value Proposition",
@@ -23,8 +24,9 @@ export function PricingSection() {
       ],
     },
     {
-      name: "Pro",
-      price: "$250",
+      name: "3 Press",
+      price: 250,
+      discount: { price: 175, percent: 30 },
       features: [
         "Key Value Proposition",
         "Key Value Proposition",
@@ -36,8 +38,9 @@ export function PricingSection() {
       ],
     },
     {
-      name: "Premium",
-      price: "$500",
+      name: "5+ Press",
+      price: 500,
+      discount: { price: 250, percent: 50 },
       features: [
         "Key Value Proposition",
         "Key Value Proposition",
@@ -59,8 +62,17 @@ export function PricingSection() {
             <Card key={index} className="border border-gray-200 shadow-sm">
               <CardHeader className="text-center pb-2">
                 <CardTitle className="text-xl">{plan.name}</CardTitle>
-                <p className="text-3xl font-bold">{plan.price}</p>
-                <p className="text-sm text-gray-500">One-time fee</p>
+                <p className="text-3xl font-bold">
+                  $ {plan.discount ? plan.discount.price : plan.price}
+                </p>
+                {plan.discount && (
+                  <div className="flex flex-row space-x-2 w-full justify-center items-center">
+                    <del>$ {plan.price}</del>{" "}
+                    <Badge className="p-2 bg-amber-300 text-black shadow-none text-md">
+                      {plan.discount.percent}% off
+                    </Badge>
+                  </div>
+                )}
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
@@ -74,9 +86,6 @@ export function PricingSection() {
                   ))}
                 </ul>
               </CardContent>
-              <CardFooter>
-                <Button className="w-full">Buy Now</Button>
-              </CardFooter>
             </Card>
           ))}
         </div>

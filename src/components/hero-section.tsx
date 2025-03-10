@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { ChevronRight } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -8,12 +9,9 @@ export function HeroSection() {
         The quickest way to publish press releases, articles, books and expert
         content for maximum exposure across channels.
       </p>
-      <Button
-        variant="outline"
-        size="sm"
-        className="rounded-full border border-gray-300 mb-12"
-      >
-        Start your Press Release
+      <Button className="rounded-full border border-gray-300 mb-12 group gap-1 p-5">
+        Book a free consultation{" "}
+        <ChevronRight className="transform transition-transform duration-200 ease-in-out group-hover:translate-x-1" />
       </Button>
     </section>
   );

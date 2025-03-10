@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 /*
   ---break---
 */
@@ -11,6 +11,15 @@
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+}
+
+@theme {
+  --font-sans: var(--font-fustat), ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --font-mono: var(--font-geist-mono), ui-monospace, Menlo, Monaco,
+    "Segoe UI Mono", "Oxygen Mono", "Ubuntu Mono", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Consolas", "Courier New", monospace;
 }
 
 /*
@@ -36,17 +45,17 @@
 :root {
   --background: hsl(0 0% 100%);
   --foreground: hsl(240 10% 3.9%);
-  --card: hsl(0 0% 100%);
+  --card: hsl(216, 20%, 95%);
   --card-foreground: hsl(240 10% 3.9%);
   --popover: hsl(0 0% 100%);
   --popover-foreground: hsl(240 10% 3.9%);
   --primary: hsl(240 5.9% 10%);
-  --primary-foreground: hsl(0 0% 98%);
+  --primary-foreground: hsl(0, 0%, 100%);
   --secondary: hsl(240 4.8% 95.9%);
   --secondary-foreground: hsl(240 5.9% 10%);
   --muted: hsl(240 4.8% 95.9%);
   --muted-foreground: hsl(240 3.8% 46.1%);
-  --accent: hsl(240 4.8% 95.9%);
+  --accent: hsl(0, 0%, 100%);
   --accent-foreground: hsl(240 5.9% 10%);
   --destructive: hsl(0 84.2% 60.2%);
   --destructive-foreground: hsl(0 0% 98%);
@@ -75,7 +84,7 @@
   --background: hsl(240 10% 3.9%);
   --foreground: hsl(0 0% 98%);
   --card: hsl(240 10% 3.9%);
-  --card-foreground: hsl(0 0% 98%);
+  --card-foreground: hsl(0, 0%, 71%);
   --popover: hsl(240 10% 3.9%);
   --popover-foreground: hsl(0 0% 98%);
   --primary: hsl(0 0% 98%);
