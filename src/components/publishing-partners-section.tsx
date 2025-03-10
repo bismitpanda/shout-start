@@ -1,47 +1,93 @@
 import Image from "next/image";
 
-interface Partner {
-  name: string;
-  logo: string;
-  alt: string;
-}
-
 export function PublishingPartners() {
   const partners = [
-    ["/logos/CEOWORLD Magazine.png", "CEOWORLD Magazine"],
-    ["/logos/DetroitMetroTimes.png", "DetroitMetroTimes"],
-    ["/logos/Forbes.png", "Forbes"],
-    ["/logos/GlobalBanking&FinanceReview.png", "GlobalBanking&FinanceReview"],
-    ["/logos/HackerNoon.png", "HackerNoon"],
-    ["/logos/InquirerNet.png", "InquirerNet"],
-    ["/logos/InternationalBusinessTimes.png", "InternationalBusinessTimes"],
-    ["/logos/LAWEEKLY.png", "LAWEEKLY"],
-    ["/logos/MetaPress.png", "MetaPress"],
-    ["/logos/PressConnects.png", "PressConnects"],
-    ["/logos/StreetInsidersCom.png", "StreetInsidersCom"],
-    ["/logos/TechTimes.png", "TechTimes"],
-    ["/logos/theJerusalemPost.png", "theJerusalemPost"],
-    ["/logos/theVillageVoice.png", "theVillageVoice"],
-    ["/logos/TheWashingtonTimes.png", "TheWashingtonTimes"],
+    ["/logos/CEOWORLD Magazine.png", "CEOWORLD Magazine", 253],
+    ["/logos/DetroitMetroTimes.png", "DetroitMetroTimes", 273],
+    ["/logos/Forbes.png", "Forbes", 173],
+    [
+      "/logos/GlobalBanking&FinanceReview.png",
+      "GlobalBanking&FinanceReview",
+      210,
+    ],
+    ["/logos/HackerNoon.png", "HackerNoon", 297],
+    ["/logos/InquirerNet.png", "InquirerNet", 209],
+    [
+      "/logos/InternationalBusinessTimes.png",
+      "InternationalBusinessTimes",
+      501,
+    ],
+    ["/logos/LAWEEKLY.png", "LAWEEKLY", 211],
+    ["/logos/MetaPress.png", "MetaPress", 236],
+    ["/logos/PressConnects.png", "PressConnects", 352],
+    ["/logos/StreetInsidersCom.png", "StreetInsidersCom", 235],
+    ["/logos/TechTimes.png", "TechTimes", 135],
+    ["/logos/theJerusalemPost.png", "theJerusalemPost", 449],
+    ["/logos/theVillageVoice.png", "theVillageVoice", 199],
+    ["/logos/TheWashingtonTimes.png", "TheWashingtonTimes", 411],
   ] as const;
 
-  return (
-    <section className="py-12 w-full">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-semibold text-center mb-12">
-          Our Publishing Partners
-        </h2>
+  const row1 = partners.slice(0, 5);
+  const row2 = partners.slice(5, 10);
+  const row3 = partners.slice(10, 14);
+  const row4 = partners.slice(14);
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 place-items-center">
-          {partners.map(([src, name]) => (
-            <div
-              key={name}
-              className="w-full flex items-center justify-center h-36"
-            >
+  return (
+    <section className="py-12 px-10 w-full">
+      <h2 className="text-3xl font-semibold text-center mb-12">
+        Our Publishing Partners
+      </h2>
+
+      <div className="flex flex-col items-center space-y-12">
+        <div className="flex flex-wrap justify-center gap-8 md:gap-12 w-full">
+          {row1.map(([logo, name, width]) => (
+            <div key={name} className="flex items-center justify-center h-20">
               <Image
-                src={src}
-                alt={name}
-                width={150}
+                src={logo}
+                alt={logo}
+                width={width}
+                height={60}
+                className="object-contain max-h-full"
+              />
+            </div>
+          ))}
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-8 md:gap-12 w-full">
+          {row2.map(([logo, name, width]) => (
+            <div key={name} className="flex items-center justify-center h-20">
+              <Image
+                src={logo}
+                alt={logo}
+                width={width}
+                height={60}
+                className="object-contain max-h-full"
+              />
+            </div>
+          ))}
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-8 md:gap-12 w-full">
+          {row3.map(([logo, name, width]) => (
+            <div key={name} className="flex items-center justify-center h-20">
+              <Image
+                src={logo}
+                alt={logo}
+                width={width}
+                height={60}
+                className="object-contain max-h-full"
+              />
+            </div>
+          ))}
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-8 md:gap-12 w-full">
+          {row4.map(([logo, name, width]) => (
+            <div key={name} className="flex items-center justify-center h-20">
+              <Image
+                src={logo}
+                alt={logo}
+                width={width}
                 height={60}
                 className="object-contain max-h-full"
               />

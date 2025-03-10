@@ -37,11 +37,9 @@ export function StatsSection() {
           <p className="uppercase text-gray-600 text-sm font-medium mb-4">
             OUR METRICS
           </p>
-          <div className="text-4xl font-bold">
+          <div className="text-5xl font-bold">
             <span className="text-yellow-400">12%</span> Faster.{" "}
-            <span className="text-blue-500">50+</span> Authors.
-          </div>
-          <div className="text-4xl font-bold">
+            <span className="text-blue-500">50+</span> Authors.{" "}
             <span className="text-red-500">300+</span> Publications.{" "}
             <span className="text-green-600">2000+</span> Views.
           </div>

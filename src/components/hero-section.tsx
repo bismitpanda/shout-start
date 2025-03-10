@@ -39,7 +39,7 @@ export function HeroSection() {
           ))}
         </Marquee>
       </div>
-      <Button className="rounded-full border border-gray-300 mb-12 group gap-1 p-5">
+      <Button className="rounded-full mb-10 group gap-1 p-6">
         Book a free consultation{" "}
         <ChevronRight className="transform transition-transform duration-200 ease-in-out group-hover:translate-x-1" />
       </Button>
