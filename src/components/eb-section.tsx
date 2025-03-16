@@ -27,7 +27,7 @@ export function EBSection() {
           </div>
           <div className="relative h-64 md:h-80">
             <Image
-              src="/eb-illustration.png"
+              src="/For Talent Visa Aspirants.png"
               alt="EB-1A"
               fill
               className="object-contain"

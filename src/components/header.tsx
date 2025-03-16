@@ -7,7 +7,12 @@ export function Header() {
     <header className="p-4 flex justify-between items-center bg-white">
       <div className="flex items-center">
         <Link href="/" className="flex items-center">
-          <span className="font-bold">Shoutstart</span>
+          <Image
+            width={200}
+            height={32}
+            src="/logo-extended.svg"
+            alt="Shout Start"
+          />
         </Link>
       </div>
       <Link href="">

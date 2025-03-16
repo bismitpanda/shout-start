@@ -11,7 +11,7 @@ export function Footer() {
             <Image
               width={200}
               height={32}
-              src="/logo-extended.png"
+              src="/logo-extended.svg"
               alt="Shout Start"
             />
             <span className="text-sm text-gray-500 dark:text-gray-400 sm:text-left">

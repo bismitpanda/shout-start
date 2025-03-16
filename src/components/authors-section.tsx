@@ -23,7 +23,7 @@ export function AuthorsSection() {
           </div>
           <div className="relative h-64 md:h-80">
             <Image
-              src="/author-illustrations.png"
+              src="/For Authors.png"
               alt="Authors & Writers"
               fill
               className="object-contain"

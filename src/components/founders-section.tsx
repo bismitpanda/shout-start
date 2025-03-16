@@ -9,7 +9,7 @@ export function FoundersSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="relative h-64 md:h-80 order-2 md:order-1">
             <Image
-              src="/marketers-illustration.png"
+              src="/For Startup-Founders.png"
               alt="Marketers"
               fill
               className="object-contain"
