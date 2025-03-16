@@ -6,13 +6,8 @@ import { useId } from "react";
 
 export function HeroSection() {
   const logos = [
-    ["/logos/CEOWORLD Magazine.png", "CEOWORLD Magazine"],
-    ["/logos/DetroitMetroTimes.png", "DetroitMetroTimes"],
     ["/logos/Forbes.png", "Forbes"],
-    ["/logos/GlobalBanking&FinanceReview.png", "GlobalBanking&FinanceReview"],
     ["/logos/HackerNoon.png", "HackerNoon"],
-    ["/logos/InquirerNet.png", "InquirerNet"],
-    ["/logos/InternationalBusinessTimes.png", "InternationalBusinessTimes"],
     ["/logos/LAWEEKLY.png", "LAWEEKLY"],
     ["/logos/MetaPress.png", "MetaPress"],
     ["/logos/PressConnects.png", "PressConnects"],

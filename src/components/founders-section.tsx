@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function FoundersSection() {
   return (
-    <section className="py-16 bg-gradient-to-l from-purple-50 via-5% to-30% to-white">
+    <section className="px-6 md:px-0 py-16 bg-gradient-to-l from-purple-50 via-5% to-30% to-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="relative h-64 md:h-80 order-2 md:order-1">

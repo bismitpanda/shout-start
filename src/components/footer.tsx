@@ -85,7 +85,7 @@ export function Footer() {
                   <Link
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="/terms"
+                    href="/terms-and-conditions"
                     className="hover:underline "
                   >
                     Terms &amp; Conditions
@@ -95,7 +95,7 @@ export function Footer() {
                   <Link
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://docs.google.com/document/d/e/2PACX-1vSw3SRmlDvRTKsLwvMnGoJpimqIgqw2wBrkZojnQBDDAr4KiFKpYT6sQtvBGnghqA/pub"
+                    href="/data-processing"
                     className="hover:underline"
                   >
                     Data Processing
@@ -105,7 +105,7 @@ export function Footer() {
                   <Link
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://docs.google.com/document/d/e/2PACX-1vSFryh8tuExtEPszK-fSFsIBwxIjWKqovmb0t2EoepZk8lPfYBCw_rFg8d_qdUczlX2TDn_YhMvFokE/pub"
+                    href="/privacy-policy"
                     className="hover:underline"
                   >
                     Privacy Policy
