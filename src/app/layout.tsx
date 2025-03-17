@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
 import { Fustat, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -29,7 +31,13 @@ export default function RootLayout({
       className={`${fustat.variable} ${geistMono.variable} antialiased font-sans`}
       suppressHydrationWarning
     >
-      <body>{children}</body>
+      <body>
+        <div className="flex flex-col min-h-screen bg-gray-50">
+          <Header />
+          {children}
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }
