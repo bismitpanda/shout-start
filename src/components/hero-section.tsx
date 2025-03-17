@@ -25,7 +25,7 @@ export function HeroSection() {
       <div className="relative flex w-full flex-col items-center justify-center overflow-hidden my-5">
         <Marquee pauseOnHover>
           {logos.map(([logo, alt]) => (
-            <div className="h-[81px] w-full">
+            <div className="h-[81px] w-max">
               <img key={alt} src={logo} alt={alt} />
             </div>
           ))}
