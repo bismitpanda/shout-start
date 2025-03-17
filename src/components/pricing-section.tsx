@@ -53,7 +53,7 @@ export function PricingSection() {
 
   return (
     <section className="py-16 px-4">
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-12">Don't whisper, Shout</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {plans.map((plan, index) => (
@@ -80,7 +80,7 @@ export function PricingSection() {
                   {plan.features.map((feature, i) => (
                     <li
                       key={i}
-                      className="flex w-full justify-center items-center"
+                      className="flex w-full justify-start items-center"
                     >
                       <span className="mr-5 text-purple-300">
                         <Check size={16} />
