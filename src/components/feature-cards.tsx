@@ -42,14 +42,12 @@ export function FeatureCards() {
 
   return (
     <section className="px-4 pb-8 max-w-7xl mx-auto bg-white">
-      <p className="text-center text-2xl mb-8">
-        Four easy steps to get you noticed
-      </p>
+      <p className="text-center text-2xl mb-8">How it works</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {features.map(({ color, title, description, icon }, index) => (
-          <Card key={index} className="border-0 shadow-sm">
+          <Card key={index} className="border-0 shadow-sm rounded-2xl">
             <CardHeader
-              className={`${color} text-white relative rounded-t-lg p-4 h-32`}
+              className={`${color} text-white relative rounded-t-2xl p-4 h-32`}
             >
               <Image
                 src={icon}
@@ -60,7 +58,7 @@ export function FeatureCards() {
               />
             </CardHeader>
             <CardContent className="p-4">
-              <CardTitle className="text-2xl mb-2">{title}</CardTitle>
+              <CardTitle className="text-2xl my-4">{title}</CardTitle>
               <CardDescription className="text-lg text-black font-light">
                 {description}
               </CardDescription>

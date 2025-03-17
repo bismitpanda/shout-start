@@ -4,8 +4,10 @@ import { useState, useEffect, useRef } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
+import { ChevronRight } from "lucide-react";
+import { Button } from "./ui/button";
 
-export function StatsSection() {
+export function MetricsSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideRef = useRef(null);
 
@@ -42,7 +44,7 @@ export function StatsSection() {
       name: "Anurag P.",
       role: "Senior Data Analyst",
       avatar: "/avatars/avatar-5.jpg",
-      image: "/dashboard-screenshot.png",
+      image: "/Publication-Shot-1.png",
       category: "Press Release • Articles",
     },
     {
@@ -50,7 +52,7 @@ export function StatsSection() {
       name: "Sarah L.",
       role: "Startup Founder",
       avatar: "/avatars/avatar-6.jpg",
-      image: "/media-outreach.png",
+      image: "/Publication-Shot-2.png",
       category: "Media Outreach • PR",
     },
     {
@@ -58,7 +60,7 @@ export function StatsSection() {
       name: "Michael T.",
       role: "Content Marketing Director",
       avatar: "/avatars/avatar-7.jpg",
-      image: "/seo-results.png",
+      image: "/Publication-Shot-3.png",
       category: "SEO • Content Marketing",
     },
   ];
@@ -81,10 +83,10 @@ export function StatsSection() {
     <section className="py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="mb-12">
-          <p className="uppercase text-gray-600 text-sm font-medium mb-4">
-            OUR METRICS
+          <p className="w-full text-center text-gray-600 text-sm font-medium mb-4">
+            Our Metrics
           </p>
-          <div className="text-5xl font-bold">
+          <div className="text-7xl text-center font-bold">
             <span className="text-yellow-400">12%</span> Faster.{" "}
             <span className="text-blue-500">50+</span> Authors.{" "}
             <span className="text-red-500">300+</span> Publications.{" "}
@@ -101,12 +103,12 @@ export function StatsSection() {
               {featuredTestimonials.map((item, index) => (
                 <div key={index} className="w-full flex-shrink-0">
                   <div className="flex flex-col md:flex-row gap-6">
-                    <div className="md:w-1/2">
+                    <div className="md:w-1/2 px-3 pt-3 bg-gray-200 rounded-md">
                       <Image
                         src={item.image}
                         alt="ShoutStart Dashboard"
                         width={600}
-                        height={400}
+                        height={300}
                         className="rounded-md"
                       />
                     </div>
@@ -137,72 +139,17 @@ export function StatsSection() {
             </div>
           </div>
 
-          <div className="absolute top-1/2 left-2 transform -translate-y-1/2">
-            <button
-              onClick={() =>
-                setCurrentSlide((prev) =>
-                  prev === 0 ? featuredTestimonials.length - 1 : prev - 1
-                )
-              }
-              className="bg-white rounded-full p-2 shadow-md text-gray-600 hover:text-gray-900 focus:outline-none"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </button>
-          </div>
-
-          <div className="absolute top-1/2 right-2 transform -translate-y-1/2">
-            <button
+          <div className="absolute right-15 bottom-15 transform size-8">
+            <Button
               onClick={() =>
                 setCurrentSlide((prev) =>
                   prev === featuredTestimonials.length - 1 ? 0 : prev + 1
                 )
               }
-              className="bg-white rounded-full p-2 shadow-md text-gray-600 hover:text-gray-900 focus:outline-none"
+              className="bg-white rounded-full size-12 p-2 shadow-md text-gray-600 hover:text-gray-900 outline-1"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
-          </div>
-
-          <div className="absolute bottom-4 left-0 right-0">
-            <div className="flex justify-center gap-2">
-              {featuredTestimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`h-2 rounded-full focus:outline-none transition-all duration-300 ${
-                    currentSlide === index
-                      ? "w-8 bg-blue-500"
-                      : "w-2 bg-gray-300"
-                  }`}
-                ></button>
-              ))}
-            </div>
+              <ChevronRight className="size-8" />
+            </Button>
           </div>
         </div>
 

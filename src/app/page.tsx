@@ -2,7 +2,7 @@ import { Header } from "@/components/header";
 import { HeroSection } from "@/components/hero-section";
 import { FeatureCards } from "@/components/feature-cards";
 import { ServicesOffered } from "@/components/services-offer-section";
-import { StatsSection } from "@/components/stats-section";
+import { MetricsSection } from "@/components/metrics-section";
 import { AuthorsSection } from "@/components/authors-section";
 import { FoundersSection } from "@/components/founders-section";
 import { TalentVisaSection } from "@/components/talent-visa-section";
@@ -19,7 +19,7 @@ export default function Page() {
         <HeroSection />
         <FeatureCards />
         <ServicesOffered />
-        <StatsSection />
+        <MetricsSection />
         <PublishingPartners />
         <AuthorsSection />
         <FoundersSection />

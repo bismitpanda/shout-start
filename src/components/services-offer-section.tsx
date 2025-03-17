@@ -75,10 +75,12 @@ export function ServicesOffered() {
               />
             </div>
             <div className="md:w-1/2 text-center md:text-right p-4">
-              <h3 className="text-4xl lg:text-5xl xl:text-6xl font-medium">
-                Press Releases
+              <h3 className="text-4xl lg:text-5xl xl:text-6xl font-semibold">
+                Press
+                <br />
+                Releases
               </h3>
-              <p className="mt-4 lg:mt-8">
+              <p className="mt-4">
                 Official announcements for businesses, startups, and
                 individuals.
               </p>
@@ -98,10 +100,12 @@ export function ServicesOffered() {
               />
             </div>
             <div className="md:w-1/2 text-center md:text-left p-4">
-              <h3 className="text-4xl lg:text-5xl xl:text-6xl font-medium">
-                Article Assistance
+              <h3 className="text-4xl lg:text-5xl xl:text-6xl font-semibold">
+                Article
+                <br />
+                Assistance
               </h3>
-              <p className="mt-4 lg:mt-8">
+              <p className="mt-4">
                 Thought leadership, industry insights, and opinion pieces to
                 establish credibility.
               </p>

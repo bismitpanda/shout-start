@@ -17,9 +17,9 @@ export function Header() {
       </div>
       <Link href="">
         <Button
-          variant="default"
+          variant="outline"
           size="sm"
-          className="bg-black text-white rounded"
+          className="bg-black text-white rounded-full p-5"
         >
           Get in Touch
         </Button>
