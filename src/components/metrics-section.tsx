@@ -13,55 +13,55 @@ export function MetricsSection() {
 
   const testimonials = [
     {
-      text: "Seamless and effective! Publishing my article was incredibly easy, and I saw a traffic boost within days!",
-      name: "Emma R.",
-      role: "Data Analyst",
-      avatar: "/avatars/avatar-1.jpg",
+      text: "ShoutStart's expertly crafted press releases significantly enhanced my research's visibility, leading to features in prominent publications like News24.",
+      name: "Rahul A.",
+      role: "Data Scientist and Financial Economist",
+      avatar: "/avatars/Rahul A.png",
     },
     {
-      text: "A game-changer for PR! Our brand's press release got picked up by multiple outlets, boosting credibility instantly.",
-      name: "Jake M.",
-      role: "Digital Marketing Manager",
-      avatar: "/avatars/avatar-2.jpg",
+      text: "ShoutStart's press release on our company’s merger garnered significant attention, leading to features in prominent publications like Yahoo Finance.",
+      name: "Nikin T.",
+      role: "Co-founder",
+      avatar: "/avatars/Nikin T.png",
     },
     {
-      text: "Fast, professional, and impactful. The best press release service I've used—highly recommended!",
-      name: "Ananya K.",
-      role: "Public Relations Specialist",
-      avatar: "/avatars/avatar-3.jpg",
+      text: "Partnering with ShoutStart amplified our mission to support high-skilled immigrants, resulting in increased recognition through major outlets such as Business Insider.",
+      name: "Rathnakumar U.",
+      role: "Founder & CEO",
+      avatar: "/avatars/Rathnakumar U.png",
     },
     {
-      text: "Helped my EB-1A case! The published article strengthened my petition and made my profile more authoritative",
-      name: "Ravi P.",
-      role: "Senior Data Scientist",
-      avatar: "/avatars/avatar-4.jpg",
+      text: "HShoutStart's expertly crafted articles significantly boosted our visibility, leading to features in prominent publications like Business Insider.",
+      name: "Soundarya B.",
+      role: "CEO & Founder",
+      avatar: "/avatars/Soundarya B.png",
     },
   ];
 
   const featuredTestimonials = [
     {
-      text: "Seamless and effective! As a data analyst, I wanted to share my insights with a wider audience. ShoutStart made publishing effortless, and I saw a traffic boost within days! The platform's reach and SEO benefits exceeded my expectations.",
-      name: "Anurag P.",
-      role: "Senior Data Analyst",
-      avatar: "/avatars/avatar-5.jpg",
+      text: "I am grateful for the strategic approach taken by this team in highlighting my contributions to cybersecurity. The press release featured in Zee News underscored my success story, reaching a diverse and extensive audience. This exposure has been instrumental in elevating my professional standing within the industry. Their dedication to delivering quality content is truly exceptional.",
+      name: "Pandi K.",
+      role: "Senior Security Program Manager",
+      avatar: "/avatars/Pandi K.png",
       image: "/Publication-Shot-1.png",
-      category: "Press Release • Articles",
+      title: "Enhanced Visibility in the Cybersecurity Community",
     },
     {
-      text: "ShoutStart transformed our company's visibility in the industry. The targeted approach to media outreach helped us connect with the right journalists who were genuinely interested in our story.",
-      name: "Sarah L.",
-      role: "Startup Founder",
-      avatar: "/avatars/avatar-6.jpg",
+      text: "The team adeptly narrated my progression from engineering student to Senior Security Program Manager in a compelling article featured on India.com. This storytelling not only resonated with a broad audience but also highlighted my dedication and passion. Their ability to authentically capture and share my story is commendable.",
+      name: "Pandi K.",
+      role: "Senior Security Program Manager",
+      avatar: "/avatars/Pandi K.png",
       image: "/Publication-Shot-2.png",
-      category: "Media Outreach • PR",
+      title: "Showcased My Career Journey Effectively",
     },
     {
-      text: "The results speak for themselves - within weeks of publishing through ShoutStart, our content was ranking on the first page of Google for our target keywords. The SEO benefits have been tremendous.",
-      name: "Michael T.",
-      role: "Content Marketing Director",
-      avatar: "/avatars/avatar-7.jpg",
+      text: "Partnering with this service was transformative for my career. Their expertly crafted press release led to my work being featured in DNA India, showcasing my role in building identity management systems. This exposure significantly enhanced my professional credibility and opened new opportunities. I highly recommend their services to professionals aiming to amplify their reach.",
+      name: "Pandi K.",
+      role: "Senior Security Program Manager",
+      avatar: "/avatars/Pandi K.png",
       image: "/Publication-Shot-3.png",
-      category: "SEO • Content Marketing",
+      title: "Elevated My Professional Profile",
     },
   ];
 
@@ -70,14 +70,10 @@ export function MetricsSection() {
       setCurrentSlide((prev) =>
         prev === featuredTestimonials.length - 1 ? 0 : prev + 1
       );
-    }, 5000);
+    }, 50000);
 
     return () => clearInterval(interval);
   }, [featuredTestimonials.length, currentSlide]);
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
 
   return (
     <section className="py-16 px-4">
@@ -103,7 +99,7 @@ export function MetricsSection() {
               {featuredTestimonials.map((item, index) => (
                 <div key={index} className="w-full flex-shrink-0">
                   <div className="flex flex-col md:flex-row gap-6">
-                    <div className="md:w-1/2 px-3 pt-3 bg-gray-200 rounded-md">
+                    <div className="md:w-1/2 px-2 pt-2 bg-gray-200 rounded-3xl">
                       <Image
                         src={item.image}
                         alt="ShoutStart Dashboard"
@@ -112,13 +108,13 @@ export function MetricsSection() {
                         className="rounded-md"
                       />
                     </div>
-                    <div className="md:w-1/2">
-                      <div className="mb-4">
-                        <p className="text-gray-700 font-medium">
-                          {item.category}
+                    <div className="md:w-1/2 flex flex-col justify-between pb-8">
+                      <div>
+                        <p className="text-3xl">{item.title}</p>
+                        <p className="text-gray-700 mt-6 text-lg">
+                          {item.text}
                         </p>
                       </div>
-                      <p className="text-gray-700 mb-6">{item.text}</p>
                       <div className="flex items-center">
                         <Avatar className="h-12 w-12 mr-4">
                           <AvatarImage src={item.avatar} alt={item.name} />
