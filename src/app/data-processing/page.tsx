@@ -175,9 +175,6 @@ export default function DataProcessing() {
 
           <div className="mt-4">
             <p className="font-semibold">ShoutStart</p>
-            <p>[Address]</p>
-            <p>[Email]</p>
-            <p>[Phone]</p>
           </div>
         </CardContent>
       </Card>

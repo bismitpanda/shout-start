@@ -105,9 +105,6 @@ export default function TermsAndConditions() {
 
           <div className="mt-6">
             <p className="font-semibold">ShoutStart</p>
-            <p>[Address]</p>
-            <p>[Email]</p>
-            <p>[Phone]</p>
           </div>
         </CardContent>
       </Card>

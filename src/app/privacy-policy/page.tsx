@@ -187,12 +187,9 @@ export default function PrivacyPolicy() {
 
           <div className="mt-4">
             <p className="font-semibold">ShoutStart</p>
-            <p>[Address]</p>
-            <p>[Email]</p>
-            <p>[Phone]</p>
           </div>
 
-          <p className="mt-6 text-sm text-gray-500">Last Updated: [Date]</p>
+          <p className="mt-6 text-sm text-gray-500">Last Updated: 15/03/2025</p>
         </CardContent>
       </Card>
     </div>
