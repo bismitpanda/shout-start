@@ -9,7 +9,11 @@ import { Button } from "./ui/button";
 
 export function MetricsSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [progress, setProgress] = useState(0);
   const slideRef = useRef(null);
+  const animationRef = useRef<number>(null);
+  const startTimeRef = useRef<number>(null);
+  const intervalDuration = 5000;
 
   const testimonials = [
     {
@@ -19,7 +23,7 @@ export function MetricsSection() {
       avatar: "/avatars/Rahul A.png",
     },
     {
-      text: "ShoutStart's press release on our company’s merger garnered significant attention, leading to features in prominent publications like Yahoo Finance.",
+      text: "ShoutStart's press release on our company's merger garnered significant attention, leading to features in prominent publications like Yahoo Finance.",
       name: "Nikin T.",
       role: "Co-founder",
       avatar: "/avatars/Nikin T.png",
@@ -65,15 +69,54 @@ export function MetricsSection() {
     },
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
+  const animate = (timestamp: number) => {
+    if (!startTimeRef.current) {
+      startTimeRef.current = timestamp;
+    }
+
+    const elapsed = timestamp - startTimeRef.current;
+    const newProgress = Math.min(100, (elapsed / intervalDuration) * 100);
+    setProgress(newProgress);
+
+    if (elapsed < intervalDuration) {
+      animationRef.current = requestAnimationFrame(animate);
+    } else {
       setCurrentSlide((prev) =>
         prev === featuredTestimonials.length - 1 ? 0 : prev + 1
       );
-    }, 50000);
+      startTimeRef.current = timestamp;
+      animationRef.current = requestAnimationFrame(animate);
+    }
+  };
 
-    return () => clearInterval(interval);
-  }, [featuredTestimonials.length, currentSlide]);
+  useEffect(() => {
+    startTimeRef.current = null;
+    animationRef.current = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, [currentSlide]);
+
+  const handleNextSlide = () => {
+    if (animationRef.current) {
+      cancelAnimationFrame(animationRef.current);
+    }
+
+    setCurrentSlide((prev) =>
+      prev === featuredTestimonials.length - 1 ? 0 : prev + 1
+    );
+
+    startTimeRef.current = null;
+    setProgress(0);
+    animationRef.current = requestAnimationFrame(animate);
+  };
+
+  const radius = 46;
+  const circumference = 2 * Math.PI * radius;
+  const strokeDashoffset = circumference * (1 - progress / 100);
 
   return (
     <section className="py-16 px-4">
@@ -109,7 +152,7 @@ export function MetricsSection() {
                       />
                     </div>
                     <div className="md:w-1/2 flex flex-col justify-between pb-8">
-                      <div>
+                      <div className="mt-10">
                         <p className="text-3xl">{item.title}</p>
                         <p className="text-gray-700 mt-6 text-lg">
                           {item.text}
@@ -135,17 +178,40 @@ export function MetricsSection() {
             </div>
           </div>
 
-          <div className="absolute right-15 bottom-15 transform size-8">
-            <Button
-              onClick={() =>
-                setCurrentSlide((prev) =>
-                  prev === featuredTestimonials.length - 1 ? 0 : prev + 1
-                )
-              }
-              className="bg-white rounded-full size-12 p-2 shadow-md text-gray-600 hover:text-gray-900 outline-1"
-            >
-              <ChevronRight className="size-8" />
-            </Button>
+          <div
+            className="absolute right-6 bottom-6 group"
+            onClick={handleNextSlide}
+          >
+            <div className="relative size-10">
+              <svg
+                className="absolute w-full h-full z-20"
+                viewBox="0 0 100 100"
+              >
+                <circle
+                  cx="50"
+                  cy="50"
+                  r={radius}
+                  fill="transparent"
+                  stroke="#e2e8f0"
+                  strokeWidth="4"
+                />
+                <circle
+                  cx="50"
+                  cy="50"
+                  r={radius}
+                  fill="transparent"
+                  stroke="black"
+                  strokeWidth="7"
+                  strokeDasharray={circumference}
+                  strokeDashoffset={strokeDashoffset}
+                  strokeLinecap="round"
+                  transform="rotate(-90 50 50)"
+                />
+              </svg>
+              <div className="absolute z-10 shadow-none m-auto bg-white rounded-full w-10 h-10 p-0 text-gray-600 group-hover:text-gray-900 group-hover:bg-gray-300 flex items-center justify-center">
+                <ChevronRight className="h-6 w-6" />
+              </div>
+            </div>
           </div>
         </div>
 

@@ -32,7 +32,7 @@ export function HeroSection() {
         </Marquee>
       </div>
       <Button className="rounded-full mb-10 group gap-1 p-6">
-        <span className="px-2">Book a free consultation</span>
+        <span className="px-2">Book a Free Consultation</span>
         <ChevronRight className="transform transition-transform duration-200 ease-in-out group-hover:translate-x-1" />
       </Button>
     </section>

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -16,12 +17,9 @@ export function Header() {
         </Link>
       </div>
       <Link href="">
-        <Button
-          variant="outline"
-          size="sm"
-          className="bg-black text-white rounded-full p-5"
-        >
-          Get in Touch
+        <Button className="rounded-full p-5 group mt-4">
+          Get in Touch{" "}
+          <ChevronRight className="transform transition-transform duration-200 ease-in-out group-hover:translate-x-1" />
         </Button>
       </Link>
     </header>

@@ -11,7 +11,7 @@ import { PublishingPartners } from "@/components/publishing-partners-section";
 
 export default function Page() {
   return (
-    <main className="flex-grow">
+    <main className="flex-grow bg-white">
       <HeroSection />
       <FeatureCards />
       <ServicesOffered />

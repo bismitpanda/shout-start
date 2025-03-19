@@ -57,9 +57,9 @@ export function FeatureCards() {
                 className="absolute bottom-0"
               />
             </CardHeader>
-            <CardContent className="p-4">
-              <CardTitle className="text-2xl my-4">{title}</CardTitle>
-              <CardDescription className="text-lg text-black font-light">
+            <CardContent className="p-5">
+              <CardTitle className="text-2xl mb-1">{title}</CardTitle>
+              <CardDescription className="text-lg text-black">
                 {description}
               </CardDescription>
             </CardContent>
