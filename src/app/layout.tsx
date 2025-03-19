@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   title: "Shoutstart - Publish. Shout. Get Noticed.",
   description:
     "The quickest way to publish press releases, articles, books and expert content for maximum readership.",
+  icons: [{ rel: "icon", url: "/logo.svg" }],
 };
 
 export default function RootLayout({
