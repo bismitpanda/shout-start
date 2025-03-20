@@ -19,7 +19,7 @@ export function MetricsSection() {
     {
       text: "ShoutStart's expertly crafted press releases significantly enhanced my research's visibility, leading to features in prominent publications like News24.",
       name: "Rahul A.",
-      role: "Data Scientist and Financial Economist",
+      role: "Financial Economist",
       avatar: "/avatars/Rahul A.png",
     },
     {
@@ -218,7 +218,7 @@ export function MetricsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {testimonials.map((item, index) => (
             <Card key={index} className="border-none shadow-none bg-slate-100">
-              <CardContent className="p-6">
+              <CardContent className="p-6 h-full flex flex-col justify-between">
                 <p className="text-gray-700 mb-4">{item.text}</p>
                 <div className="flex items-center">
                   <Avatar className="h-10 w-10 mr-3">

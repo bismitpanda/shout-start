@@ -59,7 +59,7 @@ export function PricingSection() {
           {plans.map((plan, index) => (
             <Card
               key={index}
-              className="border border-gray-200 shadow-sm h-max"
+              className="border border-gray-200 shadow-sm h-full"
             >
               <CardHeader className="text-center pb-2">
                 <CardTitle className="text-xl">{plan.name}</CardTitle>

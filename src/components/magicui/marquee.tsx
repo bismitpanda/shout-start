@@ -50,11 +50,11 @@ export function Marquee({
           "flex-row": !vertical,
           "flex-col": vertical,
         },
-        className,
+        className
       )}
     >
       {Array(repeat)
-        .fill(0)
+        .fill(undefined)
         .map((_, i) => (
           <div
             key={i}
